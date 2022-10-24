@@ -24,14 +24,14 @@
               elevation="0"
               class="panel-card-knowledge-base">
               <!-- -- -->
-              <KnowledgeBases></KnowledgeBases>
+              <KnowledgeBases :knowledgeBases="this.knowledgeBases"></KnowledgeBases>
               <!-- -- -->
           </v-col>
           <v-col cols="3">
             <!-- -- -->
-            <MostLikes></MostLikes>
+            <MostLikes :mostLikes="this.mostLikes"></MostLikes>
             <!-- -- -->
-            <Trending></Trending>
+            <Trending :trending="this.trending"></Trending>
             <!-- -- -->
           </v-col>
         </v-row>
@@ -45,20 +45,46 @@
   import KnowledgeBases from "./ContentKnowledgeBases";
   import Trending from "./ContentTrending";
   import MostLikes from "./ContentMostLikes";
+  import axios from 'axios';
+
   export default {
     components: {
-            NavbarMain,
-            KnowledgeBases,
-            Trending,
-            MostLikes,
+      NavbarMain,
+      KnowledgeBases,
+      Trending,
+      MostLikes,
     },
-    data: () => ({
-      navLinksLeft: [
-        'Article',
-      ],
-      navLinksRight: [
-        'Create Article',
-      ],
-    }),
+    data() {
+      return {
+        navLinksLeft: [
+          'Article',
+        ],
+        navLinksRight: [
+          'Create Article',
+        ],
+        knowledgeBases: null,
+        trending: null,
+        mostLikes: null
+      }
+    },
+    created() {
+      this.getDataDashboard();
+    },
+    methods: {
+      getTeamSLug() {
+        return location.search.split('team=')[1];
+      },
+      getDataDashboard() {
+        let teamSlug = this.getTeamSLug();
+        axios.get(`http://opus.bona.dev.jasmeet.id/api/dashboard/${teamSlug}`)
+          .then(
+            response => (
+              this.knowledgeBases = response.data.data.knowledgeBases.spaces,
+              this.trending = response.data.data.pageTrending,
+              this.mostLikes = response.data.data.mostLikes
+            )
+          )
+      }
+    },
   }
 </script>
