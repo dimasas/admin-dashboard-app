@@ -31,14 +31,19 @@
                                 rounded
                                 outlined
                                 small
-                                class="secondaryFont"
+                                class="secondaryFont ml-5"
                                 >
-                                <v-btn icon><v-icon size="14" light>mdi-heart</v-icon></v-btn>
+                                <v-icon size="14" light>mdi-heart</v-icon>
                                 Salin Link
                             </v-btn>
                         </div> 
                     </v-col>
                 </v-row>
+            </v-card-text>
+            <v-card-text>
+              <v-card-title class="panel-title-knowledge">
+                <h4>Security Devices & <br> Management</h4>
+              </v-card-title>
             </v-card-text>
                   <!--  -->
                   <v-row>

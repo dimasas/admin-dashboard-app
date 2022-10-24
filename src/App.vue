@@ -34,22 +34,22 @@
     </v-app-bar> -->
 
     <v-main style="padding: 0px !important;">
-      <HomeMain/>
-      <!-- <Article/> -->
+      <!-- <HomeMain/> -->
+      <Article/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HomeMain from './components/home/HomeMain.vue';
-// import Article from './components/article/articleMain.vue';
+// import HomeMain from './components/home/HomeMain.vue';
+import Article from './components/article/articleMain.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HomeMain,
-    // Article,
+    // HomeMain,
+    Article,
   },
 
   data: () => ({
@@ -136,6 +136,9 @@ export default {
     }
     .mr-5{
       margin-right:5px !important;
+    }
+    .ml-5{
+      margin-left:5px !important;
     }
     /* -- */
     .br-20{
