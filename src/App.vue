@@ -34,22 +34,22 @@
     </v-app-bar> -->
 
     <v-main style="padding: 0px !important;">
-      <!-- <HomeMain/> -->
-      <Article/>
+      <HomeMain/>
+      <!-- <Article/> -->
     </v-main>
   </v-app>
 </template>
 
 <script>
-// import HomeMain from './components/home/HomeMain.vue';
-import Article from './components/article/articleMain.vue';
+import HomeMain from './components/home/HomeMain.vue';
+// import Article from './components/article/articleMain.vue';
 
 export default {
   name: 'App',
 
   components: {
-    // HomeMain,
-    Article,
+    HomeMain,
+    // Article,
   },
 
   data: () => ({
@@ -65,8 +65,11 @@ export default {
     }
     .v-application {
     }
+    body{
+      background: #eef8ff;
+    }
     .v-application--wrap{
-      background: #c6e7ff54;
+      background: #eef8ff;
     }
     .v-list {
       padding: 0px !important;
@@ -89,6 +92,9 @@ export default {
       background: linear-gradient(140.58deg, #78C5F1 13.04%, #0C97E4 88%) !important;
       border-radius: 20px !important;
       color: white !important;
+    }
+    .align-end{
+      text-align: end;
     }
     .line-cardSheet{
       border-left-style: solid;
@@ -137,9 +143,6 @@ export default {
     .mr-5{
       margin-right:5px !important;
     }
-    .ml-5{
-      margin-left:5px !important;
-    }
     /* -- */
     .br-20{
       border-radius: 20px !important;
@@ -164,6 +167,16 @@ export default {
     }
     .panel-title-knowledge{
       padding: 4px 8px !important;
+    }
+    .panel-article{
+      padding: 24px 28px;
+    }
+    #content-article{
+      /* padding: 10px 0px; */
+      text-align: justify !important;
+    }
+    .chip-tag{
+      background: #F1F9FE !important;
     }
 
     @media (min-width: 1264px){

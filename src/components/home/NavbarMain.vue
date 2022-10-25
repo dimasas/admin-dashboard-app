@@ -15,7 +15,7 @@
                 width="140"
               />
             </v-col>
-            <v-col cols="6" class="d-flex flex-row-reverse">
+            <!-- <v-col cols="6" class="d-flex flex-row-reverse">
               <v-btn
                 rounded
                 class="btn-createArticle"
@@ -25,7 +25,7 @@
               >
                 {{ navLinksRight }}
               </v-btn>
-            </v-col>
+            </v-col> -->
         </v-row> 
     </div>
 </template>

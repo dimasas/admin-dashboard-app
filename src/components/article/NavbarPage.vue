@@ -20,14 +20,14 @@
                     >
                     {{ navLinksRight }}
                 </v-btn>
-                <v-btn
+                <!-- <v-btn
                     rounded
                     outlined
                     color="white"
                     class="mr-5"
                     >
                     Create Article
-                </v-btn>
+                </v-btn> -->
             </v-col>
         </v-row> 
     </div>
@@ -37,9 +37,9 @@
 <script>
   export default {
     data: () => ({
-      navLinksLeft: [
-        'Article',
-      ],
+      // navLinksLeft: [
+      //   'Article',
+      // ],
       navLinksRight: [
         'Post Question'
       ],
